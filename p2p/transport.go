@@ -6,5 +6,6 @@ type Peer interface {}
 // Transport is an interface that handles the communication
 // between the remotenodes in the network
 type Transport interface {
-	ListenAndAccept() error  // Start listening for incoming connections
+	ListenAndAccept() error
+	Consume() <-chan RPC
 }
